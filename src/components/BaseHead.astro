@@ -2,6 +2,7 @@
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
 import '../styles/global.css';
+import { ANALYTICS_CONFIG } from '../config/analytics';
 
 export interface Props {
 	title: string;
@@ -18,6 +19,19 @@ const { title, description, image = '/social_img.webp', ogType = 'website' } = A
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <meta name="generator" content={Astro.generator} />
+
+<!-- Umami Analytics -->
+<script defer 
+  src={ANALYTICS_CONFIG.UMAMI_SCRIPT_URL} 
+  data-website-id={ANALYTICS_CONFIG.UMAMI_WEBSITE_ID}>
+</script>
+
+<!-- Security Headers -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' cloud.umami.is; style-src 'self' 'unsafe-inline';">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="X-XSS-Protection" content="1; mode=block">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
