@@ -1,0 +1,97 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+---
+
+<BaseLayout title="Resume" sideBarActiveItemID="cv">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Profile</div>
+  </div>
+
+  <div class="mb-10 text-justify">
+    Outside of work, I’m passionate about longevity, European history, and 1990s cinema. I enjoy discovering new perspectives and skills from books, exploring financial markets, and diving into brand marketing trends. Always up for learning new things while keeping life interesting and fun, I thrive on adaptability and balancing precision with curiosity.
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Education</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="Master of Business Data Analysis "
+      subtitle="From 2024 to 2026 at Faculty of Business and Administration, Bucharest. ">
+      <ul class="list-disc pl-5">
+        <li>Currently developing advanced skills in statistical and econometric data analysis, machine learning, and artificial intelligence for economic modeling.</li>
+        <li>Focused on the implementation of statistical data analysis methods for real-world economic scenarios using artificial intelligence.</li>
+        <li>Undertaking projects involving the development of economic-mathematical models for microeconomic system analysis and validation.</li>
+        </ul>
+    </TimeLineElement>
+    <TimeLineElement
+      title="Bachelor of Marketing"
+      subtitle="From 2018 to 2021 at Faculty of Business and Administration, Bucharest">
+
+      <ul class="list-disc pl-5">
+        <li>Developed a strong foundation in analytical and technical skills through coursework in statistics, accounting, and economics.</li>
+        <li>Gained proficiency in tools such as SQL, R, and Python for data analysis and reporting.        </li>
+        <li>Collaborated effectively in team-based projects, enhancing communication and problem-solving abilities.        </li>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Experience</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Financial Analyst / Controller at ABB"
+      subtitle="From 2023 to Present"
+    >
+      <ul class="list-disc pl-5">
+        <li>Achieved $550,000 in cost savings by resolving over 1,000 aged purchase orders within 12 months.</li>
+        <li>Streamlined SAP workflows, reducing operational issues and improving departments coordination.</li>
+        <li>Led month-end and year-end closing processes, ensuring timely and accurate financial reporting.</li>
+        <li>Contributed to different projects by developing reconciliation processes, resolving data discrepancies, and ensuring smooth business operations.</li>
+      </ul><br>
+    </TimeLineElement>
+    <TimeLineElement
+      title="Audit Analyst at Deloitte"
+      subtitle="From 2021 to 2023"
+    >
+      <ul class="list-disc pl-5">
+        <li>Identified trends and patterns in audit engagements across the EMEA region for clients managing over $1 billion in assets.</li>
+        <li>Successfully managed multiple audit engagements simultaneously with precision, ensuring the timely delivery of high-quality work.</li>
+        <li>Excelled in Deloitte's internal training programs and furthered skills through multiple courses on platforms like Udemy and Coursera.</li>
+      </ul>
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Certifications</div>
+  </div>
+
+  <ul class="list-disc mx-6 mb-10 grid gap-2">
+    <li>
+      <a href="#" target="_blank"> Google Digital Marketing</a>
+    </li>
+    <li>
+      <a href="#" target="_blank"> EDX - ACCA - Foundation</a>
+    </li>
+  </ul>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Skills</div>
+  </div>
+
+  <ul class="list-disc md:columns-5 columns-2 mx-6">
+    <li>Microsoft Excel (Advanced)</li>
+    <li>SQL/R/Python</li>
+    <li>SAP FI/CO</li>
+    <li>Financial Controlling</li>
+    <li>FP&A</li>
+    <li>Budgeting</li>
+    <li>Forecasting</li>
+    <li>Audit</li>
+    <li>Data Analysis</li>
+    <li>Problem-Solving</li>
+    <li>Detail-Oriented</li>
+  </ul>
+</BaseLayout>
