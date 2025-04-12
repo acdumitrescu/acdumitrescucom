@@ -1,6 +1,10 @@
 ---
+import { Image } from "astro:assets";
 const { title, img, desc, url, badge, tags, target = "_blank" } = Astro.props;
 const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
+
+// Handle both imported images and URL strings
+const imageSrc = typeof img === 'string' ? img : img;
 ---
 
 <div
@@ -10,12 +14,23 @@ const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
     <div class="hero-content flex-col md:flex-row">
       {
         img && (
-          <img
-            src={img}
-            alt={title}
-            class="max-w-full md:max-w-[13rem] rounded-lg"
-            loading="lazy"
-          />
+          typeof img === 'string' ? (
+            <img
+              src={img}
+              alt={title}
+              class="max-w-full md:max-w-[13rem] rounded-lg"
+              width="208"
+              height="208"
+            />
+          ) : (
+            <Image
+              src={img}
+              alt={title}
+              class="max-w-full md:max-w-[13rem] rounded-lg"
+              width={208}
+              height={208}
+            />
+          )
         )
       }
       <div class="grow w-full">
